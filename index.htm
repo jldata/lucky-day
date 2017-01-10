@@ -2,73 +2,75 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>抽奖</title>
-    <!-- normalize.css -->
-    <link rel="stylesheet" href="./public/styles/normalize.css">
-    <!-- this project jquery-confirm.min.css -->
-    <link rel="stylesheet" href="./public/styles/animate.min.css">
-    <!-- 弹出框 -->
-    <link rel="stylesheet" href="./public/styles/jquery-confirm.min.css">
-    <link rel="stylesheet" href="./public/styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="抽奖,年会,聚龙融创,lottery">
+  <meta name="description" content="用于公司年会抽奖">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>抽奖</title>
+  <!-- normalize.css -->
+  <link rel="stylesheet" href="./public/styles/normalize.css">
+  <!-- this project jquery-confirm.min.css -->
+  <link rel="stylesheet" href="./public/styles/animate.min.css">
+  <!-- 弹出框 -->
+  <link rel="stylesheet" href="./public/styles/jquery-confirm.min.css">
+  <link rel="stylesheet" href="./public/styles/main.css">
 </head>
 
 <body>
-    <div class="main" id="lottery">
-        <section>
-            <img src="./public/image/basic/scroll-top.png" class="re-bottom">
-            <div id="mainPg">
-                <div class="profile hiden" id="profile">
-                    <ul id="oUl">
-                        <li id="profile-default"><img src="./public/image/basic/default.png" class="profile-default"></li>
-                        <li v-for="(item, index) in items" v-bind:data-username="item.userName" v-bind:data-index="index"><img v-bind:src="item.imageUrl"></li>
-                    </ul>
-                </div>
-                <img src="./public/image/basic/scroll-bottom.png" class="re-bottom">
-                <button id="startBtn" type="button" v-bind:class="{'am-btn-danger':!status.stop,'am-btn-secondary':status.stop}" v-bind:data-status="status.action" v-on:click="updateStatus">{{ status.name }}</button>
-            </div>
-        </section>
-        <section id="award-list" class="hiden">
-            <div class="lt-award-font"><b class="award-1">返场奖</b></div>
-            <ul class="lt-award first-award" id="first-award">
-            </ul>
-            <div class="lt-award-font"><b class="award-2">特等奖</b></div>
-            <ul class="lt-award second-award" id="second-award">
-            </ul>
-            <div class="lt-award-font"><b class="award-3">一等奖</b></div>
-            <ul class="lt-award third-award" id="third-award">
-            </ul>
-
-            <div class="lt-award-font"><b class="award-4">二等奖</b></div>
-            <ul class="lt-award fouth-award" id="fouth-award">
-            </ul>
-            
-            <div class="lt-award-font"><b class="award-5">三等奖</b></div>
-            <ul class="lt-award fifth-award" id="fifth-award">
-            </ul>
-        </section>
-    </div>
-    <div id="helpBtn" onclick="toggleSetting()" class="animated tada">setting</div>
+  <div class="main" id="lottery">
     <section>
-        <script src="./public/scripts/vue.js"></script>
-        <script src="./public/scripts/jquery.min.js"></script>
-        <script src="./public/scripts/jquery-confirm.min.js"></script>
-        <script src="./public/scripts/shuffle.js"></script>
-        <script src="./public/json/local.js"></script>
-        <script src="./public/scripts/app.js"></script>
-        <script>
-        $(function() {
-
-            initPage(function() {
-                $('#profile').slideDown(3000, function() {
-                    showBtn(showList)
-                })
-            })
-
-        })
-        </script>
+      <img src="./public/image/basic/scroll-top.png" class="re-bottom">
+      <div id="mainPg">
+        <div class="profile hiden" id="profile">
+          <ul id="oUl">
+            <li id="profile-default"><img src="./public/image/basic/default.png" class="profile-default"></li>
+            <li v-for="(item, index) in items" v-bind:data-username="item.userName" v-bind:data-index="index"><img v-bind:src="item.imageUrl"></li>
+          </ul>
+        </div>
+        <img src="./public/image/basic/scroll-bottom.png" class="re-bottom">
+        <button id="startBtn" type="button" v-bind:class="{'am-btn-danger':!status.stop,'am-btn-secondary':status.stop}" v-bind:data-status="status.action" v-on:click="updateStatus">{{ status.name }}</button>
+      </div>
     </section>
+    <section id="award-list" class="hiden">
+      <div class="lt-award-font"><b class="award-1">返场奖</b></div>
+      <ul class="lt-award first-award" id="first-award">
+      </ul>
+      <div class="lt-award-font"><b class="award-2">特等奖</b></div>
+      <ul class="lt-award second-award" id="second-award">
+      </ul>
+      <div class="lt-award-font"><b class="award-3">一等奖</b></div>
+      <ul class="lt-award third-award" id="third-award">
+      </ul>
+
+      <div class="lt-award-font"><b class="award-4">二等奖</b></div>
+      <ul class="lt-award fouth-award" id="fouth-award">
+      </ul>
+
+      <div class="lt-award-font"><b class="award-5">三等奖</b></div>
+      <ul class="lt-award fifth-award" id="fifth-award">
+      </ul>
+    </section>
+  </div>
+  <div id="helpBtn" onclick="toggleSetting()" class="animated tada">setting</div>
+  <section>
+    <script src="./public/scripts/vue.js"></script>
+    <script src="./public/scripts/jquery.min.js"></script>
+    <script src="./public/scripts/jquery-confirm.min.js"></script>
+    <script src="./public/scripts/shuffle.js"></script>
+    <script src="./public/json/local.js"></script>
+    <script src="./public/scripts/app.js"></script>
+    <script>
+      $(function() {
+
+        initPage(function() {
+          $('#profile').slideDown(3000, function() {
+            showBtn(showList)
+          })
+        })
+
+      })
+    </script>
+  </section>
 </body>
 
 </html>
