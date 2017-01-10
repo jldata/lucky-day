@@ -1,0 +1,305 @@
+    body {
+        background-image: url("../image/basic/bg.png");
+    }
+    
+    li {
+        list-style-type: none;
+        display: inline-block;
+    }
+    
+    .main {
+        width: 840px;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+    .profile {
+        width: 100%;
+        box-sizing: content-box;
+        background: url(../image/basic/scroll-bg.png);
+        width: 700px;
+        margin-left: 70px;
+        position: relative;
+        bottom: -28px;
+        z-index: 20;
+    }
+    
+    .profile img {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        width: 295px;
+        height: 413px;
+        margin-left: -162px;
+    }
+    
+    li > img.profile-default {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        width: 576px;
+        height: 413px;
+        margin-left: -307px;
+    }
+    
+    .profile ul li {
+        display: block;
+    }
+    
+    .lt-btn {
+        width: 150px;
+        position: relative;
+        left: 50%;
+        margin-left: -75px;
+    }
+    
+    .lt-show {
+        display: block !important;
+    }
+    
+    .lt-hidden {
+        display: none !important;
+    }
+    
+    #oUl li {
+        display: none;
+    }
+    
+    #oUl li:nth-child(1) {
+        display: block;
+    }
+    
+    .lt-award {
+        display: block;
+        height: 25px;
+        position: relative;
+        top: 31px;
+        margin-left: 135px;
+        overflow: overlay;
+        width: 450px;
+    }
+    
+    .lt-award li img {
+        width: 100px;
+        height: 75px;
+    }
+    
+    .lt-award-font {
+        position: relative;
+        top: 20px;
+        left: 60px;
+        font-size: 18px;
+        font-family: "Microsoft YaHei";
+        color: rgb(204, 9, 21);
+    }
+    
+    .lt-award-font b {
+        position: absolute;
+    }
+    
+    .lt-block {
+        display: block;
+        text-align: center;
+        margin-right: 14px;
+        color: #333;
+        font-size: 14px;
+    }
+    
+    #startBtn {
+        background-image: url(../image/basic/startBtn.png);
+        background-size: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 54px;
+        font-size: 24px;
+        font-family: "Microsoft YaHei";
+        color: rgb(249, 232, 183);
+        border: 0;
+        position: relative;
+        left: 333px;
+        margin: 85px 0 0;
+        background-repeat: no-repeat;
+    }
+    
+    #award-list {
+        background: url(../image/basic/list-bg.png) no-repeat;
+        background-position-x: 10px;
+        position: relative;
+        margin-top: 60px;
+        height: 249px;
+    }
+    
+    .re-bottom {
+        z-index: 100;
+        position: absolute;
+    }
+    
+    .lt-award-font b {
+        width: 100px;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+    }
+    
+    .award-bg {
+        background: url(../image/basic/award.png) no-repeat;
+        color: rgb(249, 232, 183);
+    }
+    
+    .hiden {
+        display: none;
+    }
+    
+    #helpBtn {
+        background: red;
+        opacity: 0.3;
+        height: 20px;
+        padding: 5px;
+        border-radius: 6px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        cursor: help;
+        transition: all 1s ease
+    }
+    
+    #helpBtn:hover {
+        background-color: #a3d7ff;
+        transform: rotate(360deg);
+        transition: background-color .3s ease
+    }
+    
+    ul#oUl {
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .jconfirm-box {
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+    .am-btn {
+        padding: 5px 10px;
+        border: 0;
+        background: cornflowerblue;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    
+    .closeIcon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    @media screen and (max-width:1400px) {
+        #award-list {
+            background: url(../image/basic/list-bg.png) no-repeat;
+            background-position-x: 44px;
+            background-size: contain;
+            position: relative;
+            margin-top: -7px;
+            height: 188px;
+        }
+        .lt-award {
+            display: block;
+            height: 18px;
+            position: relative;
+            top: 18px;
+            margin-left: 150px;
+            overflow: overlay;
+            width: 450px;
+        }
+        .lt-award-font {
+            position: relative;
+            top: 11px;
+            left: 97px;
+            font-size: 16px;
+            font-family: "Microsoft YaHei";
+            color: rgb(204, 9, 21);
+        }
+        .award-bg {
+            background: url(../image/basic/award.png) no-repeat;
+            background-size: contain;
+            color: rgb(249, 232, 183);
+        }
+        .lt-award-font b {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        #startBtn {
+            background-image: url(../image/basic/startBtn.png);
+            background-size: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 144px;
+            height: 43.2px;
+            font-size: 18px;
+            font-family: "Microsoft YaHei";
+            color: rgb(249, 232, 183);
+            border: 0;
+            position: relative;
+            left: 284px;
+            margin: 34px 0 0;
+            background-repeat: no-repeat;
+        }
+        .re-bottom {
+            z-index: 100;
+            position: absolute;
+            width: 713px;
+        }
+        .profile {
+            width: 100%;
+            box-sizing: content-box;
+            background: url(../image/basic/scroll-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 592px;
+            margin-left: 61px;
+            position: relative;
+            bottom: -22px;
+            z-index: 20;
+            height: 340px;
+        }
+        .profile img {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            width: 226px;
+            height: 308px;
+            margin-left: -131px;
+        }
+        .main {
+            width: 720px;
+            height: 100%;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        li > img.profile-default {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            width: 486px;
+            height: 308px;
+            margin-left: -263px;
+        }
+    }
+    
+    @media screen and (min-height:650px) {
+        #startBtn {
+            margin: 60px 0 0;
+        }
+        #award-list {
+            margin-top: 40px;
+        }
+        .main {
+            margin-top: 60px;
+        }
+    }
